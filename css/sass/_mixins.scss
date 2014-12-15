@@ -1,0 +1,136 @@
+/****************************************************
+ * =MIXINS
+ */
+
+/**********
+ BREAKPOINTS
+*/
+
+/*************
+
+USAGE:
+
+  @include respond(laptop){
+  }
+  @include respond(netbook){
+  }
+  @include respond(tablet){
+  }
+  @include respond(mobile){
+  }
+
+**************/
+
+@mixin respond($point) {
+  @if $point == mobile {
+    @media only screen and (min-width:0px) and (max-width:767px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width:768px) and (max-width:1023px) { @content ; }
+  }
+  @else if $point == netbook {
+    @media only screen and (min-width:1024px) and (max-width:1279px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media only screen and (min-width:1280px) and (max-width:1439px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media only screen and (min-width:1440px) { @content ; }
+  }
+}
+
+/**********
+ MODULES
+*/
+
+@mixin inlineBlock {
+  display:inline-block;
+  *display: inline;
+  vertical-align:top;
+  margin-right:-4px;
+  *zoom: 1;
+}
+
+@mixin roundCorners {
+  border-radius:6px;
+}
+
+@mixin roundCornersLg {
+  border-radius:50px;
+}
+
+@mixin roundCornersSm {
+  border-radius:2px;
+}
+
+@mixin roundCornersTop {
+  border-radius:5px 5px 0 0;
+}
+
+@mixin roundCornersTopSm {
+  border-radius:2px 2px 0 0;
+}
+
+@mixin roundCornersOpp {
+  border-radius:0 25px 0 25px;
+}
+
+@mixin roundCornersTopRight {
+  border-radius:0 5px 0 0;
+}
+
+@mixin roundCornersTopLeft {
+  border-radius:5px 0 0 0;
+}
+
+@mixin roundCornersBottom {
+  border-radius:0 0 5px 5px ;
+}
+
+@mixin roundCornersBottomSm {
+  border-radius:2px 0 2px 2px ;
+}
+
+@mixin roundCornersBottomRight {
+  border-radius:0 0 5px 0 ;
+}
+
+@mixin roundCornersBottomLeft {
+  border-radius:0 0 0 25px;
+}
+
+@mixin roundCornersLeft {
+  border-radius:5px 0 0 5px;
+}
+
+@mixin roundCornersRight {
+  border-radius:0 5px 5px 0;
+}
+
+@mixin textShadow{
+  text-shadow: 1px 1px #333333;
+}
+
+@mixin dropShadow{
+  box-shadow: 0 0 5px 5px #333333;
+}
+
+@mixin dropShadowBot{
+  box-shadow: 0 5px 5px 0 #666666;
+}
+
+@mixin dropShadowBotLite{
+  box-shadow: 0 5px 5px 0 #cccccc;
+}
+
+@mixin innerShadow{
+  box-shadow: inset 0 0 2px 2px #999999;
+}
+
+@mixin innerShadowLite{
+  box-shadow: inset 0 0 2px 2px #cccccc;
+}
+
+@mixin innerShadowBlue{
+  box-shadow: inset 0 0 2px 2px $blueDark;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Schmoilerplate",
+  "version": "1.0.0",
+  "description": "Schmoilerplate Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:criator/schmoilerplate.git"
+  },
+  "keywords": [
+    "schmoilerplate",
+    "boilerplate"
+  ],
+  "author": "Chris Tallia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/criator/schmoilerplate/issues"
+  },
+  "homepage": "https://github.com/criator/schmoilerplate",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-gzip": "^0.0.8",
+    "gulp-jshint": "^1.9.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.1.0",
+    "gulp-shell": "^0.2.11",
+    "gulp-watch": "^3.0.0"
+  },
+  "devDependencies": {}
+}
