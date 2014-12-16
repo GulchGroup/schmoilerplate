@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -7,6 +8,13 @@ var gzip = require('gulp-gzip');
 var jshint = require('gulp-jshint');
 var livereload = require('gulp-livereload');
 var shell = require('gulp-shell');
+var webserver = require('gulp-webserver');
+var opn = require('opn');
+
+var server = {
+    host: 'localhost',
+    port: '8001'
+}
 
 var gzip_options = {
     threshold: '1kb',
@@ -34,6 +42,20 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
+gulp.task('webserver', function() {
+    gulp.src( '.' )
+        .pipe(webserver({
+            host:             server.host,
+            port:             server.port,
+            livereload:       true,
+            directoryListing: false
+        }));
+});
+
+gulp.task('openbrowser', function() {
+    opn( 'http://' + server.host + ':' + server.port );
+});
+
 //run django server
 //omit to run django server separately - must also remove reference in default task below
 //gulp.task('django', shell.task(['. venv/bin/activate && pip install -r requirements.txt && python ./manage.py runserver']));
@@ -53,4 +75,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['sass', 'lint', 'watch']);
+gulp.task('default', ['sass', 'lint', 'webserver', 'openbrowser', 'watch']);
