@@ -1,0 +1,205 @@
+/****************************************************
+ * Schmoilerplate
+ * Primary style sheet
+ * Author: Chris Tallia
+ * WINTER 2015
+ ***************************************************/
+/****************************************************
+ * =IMPORTS
+ */
+/****************************************************
+ * =RESET
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  cursor: default; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none; }
+
+/****************************************************
+ * =MIXINS
+ */
+/**********
+ BREAKPOINTS
+*/
+/*************
+
+USAGE:
+
+  @include respond(laptop){
+  }
+  @include respond(netbook){
+  }
+  @include respond(tablet){
+  }
+  @include respond(mobile){
+  }
+
+**************/
+/**********
+ MODULES
+*/
+/****************************************************
+ * =VARIABLES
+ */
+/****************************************************
+ * =TYPOGRAPHY
+ */
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 60px; }
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  color: #aaaaaa; }
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0099ff; }
+
+/****************************************************
+ * =MODULAR ELEMENTS
+ */
+.hide {
+  display: none; }
+
+.block {
+  display: block;
+  width: 100%; }
+
+.clear {
+  clear: both; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.pad-top {
+  padding-top: 40px; }
+
+.margin-top {
+  padding-top: 40px; }
+
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  margin-right: -4px;
+  *zoom: 1; }
+
+a.block-link {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+/****************************************************
+ * =FORM ELEMENTS
+ */
+input[type="text"], input[type="password"] {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  margin-right: -4px;
+  *zoom: 1;
+  box-shadow: inset 0 0 2px 2px #999999;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border: solid 1px #cccccc;
+  padding: 0 6px;
+  height: 28px;
+  font-size: 16px;
+  width: 200px;
+  box-shadow: none; }
+input[type="submit"] {
+  float: right; }
+
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border: solid 1px #cccccc;
+  padding: 6px;
+  margin: 5px 0;
+  font-size: 16px;
+  width: 288px;
+  height: 50px; }
+
+th {
+  vertical-align: top; }
+
+/****************************************************
+ * =STRUCTURAL ELEMENTS
+ */
+div {
+  word-wrap: break-word; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  color: #333333;
+  line-height: 18px; }
+
+div.full {
+  display: block;
+  width: 100%; }
+
+div.container {
+  margin: 0 auto;
+  width: 1320px;
+  display: block;
+  position: relative;
+  clear: both;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out; }
+  div.container.padTop {
+    padding-top: 40px; }
+
+div.header {
+  background: #dddddd;
+  width: 100%;
+  height: 50px; }
+  div.header div.logo {
+    display: inline;
+    line-height: 50px;
+    font-size: 14px; }
+
+div.nav {
+  float: right;
+  line-height: 50px; }
