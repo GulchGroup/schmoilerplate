@@ -6,7 +6,5 @@ Schmoilerplate boilerplate is meant to be a starting point from which frontend d
 
 ### Installation
 
-'''
 - sudo npm install
 - gulp
-'''
