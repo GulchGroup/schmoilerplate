@@ -7,6 +7,7 @@
 /****************************************************
  * =IMPORTS
  */
+/* reset can be found and altered at '_reset.scss' */
 /****************************************************
  * =RESET
  */
@@ -45,23 +46,31 @@ table {
 button {
   border: none; }
 
+/* mixins can be found and altered at '_mixins.scss' */
 /****************************************************
  * =MIXINS
  */
 /**********
- BREAKPOINTS
+ RESPONSIVE BREAKPOINTS
 */
 /*************
 
 USAGE:
 
+  @include respond(desktop){
+    container is 1380px
+  }
   @include respond(laptop){
+    container is 1260px
   }
   @include respond(netbook){
+    container is 960px
   }
   @include respond(tablet){
+    container is 720px
   }
   @include respond(mobile){
+    container is 320px
   }
 
 **************/
@@ -113,11 +122,14 @@ a {
 .float-left {
   float: left; }
 
+.pad-ends {
+  padding: 20px 0; }
+
 .pad-top {
-  padding-top: 40px; }
+  padding-top: 20px; }
 
 .margin-top {
-  padding-top: 40px; }
+  padding-top: 20px; }
 
 .inline-block {
   display: inline-block;
@@ -125,11 +137,6 @@ a {
   vertical-align: top;
   margin-right: -4px;
   *zoom: 1; }
-
-a.block-link {
-  width: 100%;
-  height: 100%;
-  display: block; }
 
 /****************************************************
  * =FORM ELEMENTS
@@ -148,8 +155,6 @@ input[type="text"], input[type="password"] {
   font-size: 16px;
   width: 200px;
   box-shadow: none; }
-input[type="submit"] {
-  float: right; }
 
 textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -160,9 +165,6 @@ textarea {
   width: 288px;
   height: 50px; }
 
-th {
-  vertical-align: top; }
-
 /****************************************************
  * =STRUCTURAL ELEMENTS
  */
@@ -172,8 +174,7 @@ div {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 12px;
-  color: #333333;
-  line-height: 18px; }
+  color: #333333; }
 
 div.full {
   display: block;
@@ -184,12 +185,21 @@ div.container {
   width: 1320px;
   display: block;
   position: relative;
-  clear: both;
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out; }
-  div.container.padTop {
-    padding-top: 40px; }
+  @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    div.container {
+      width: 1260px; } }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    div.container {
+      width: 960px; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    div.container {
+      width: 720px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    div.container {
+      width: 300px; } }
 
 div.header {
   background: #dddddd;
@@ -198,7 +208,9 @@ div.header {
   div.header div.logo {
     display: inline;
     line-height: 50px;
-    font-size: 14px; }
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666; }
 
 div.nav {
   float: right;
