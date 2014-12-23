@@ -26,6 +26,7 @@ var gzip_options = {
 //minify and gzip processed sass files
 gulp.task('sass', function() {
     return gulp.src('css/sass/*.scss')
+        .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest('css/stylesheets'))
         .pipe(rename({suffix: '.min'}))
@@ -38,6 +39,7 @@ gulp.task('sass', function() {
 
 gulp.task('lint', function() {
     return gulp.src('js/custom/*.js')
+        .pipe(plumber())
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
