@@ -104,41 +104,6 @@ a {
   color: #0099ff; }
 
 /****************************************************
- * =MODULAR ELEMENTS
- */
-.hide {
-  display: none; }
-
-.block {
-  display: block;
-  width: 100%; }
-
-.clear {
-  clear: both; }
-
-.float-right {
-  float: right; }
-
-.float-left {
-  float: left; }
-
-.pad-ends {
-  padding: 20px 0; }
-
-.pad-top {
-  padding-top: 20px; }
-
-.margin-top {
-  padding-top: 20px; }
-
-.inline-block {
-  display: inline-block;
-  *display: inline;
-  vertical-align: top;
-  margin-right: -4px;
-  *zoom: 1; }
-
-/****************************************************
  * =FORM ELEMENTS
  */
 input[type="text"], input[type="password"] {
@@ -166,6 +131,44 @@ textarea {
   height: 50px; }
 
 /****************************************************
+ * =MODULAR ELEMENTS
+ */
+.hide {
+  display: none; }
+
+.block {
+  display: block;
+  width: 100%; }
+
+.clear {
+  clear: both; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.pad-ends {
+  padding: 20px 0; }
+
+.pad-top {
+  padding-top: 40px; }
+
+.margin-top {
+  padding-top: 20px; }
+
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  margin-right: -4px;
+  *zoom: 1; }
+
+/****************************************************
+ * =REUSABLE ELEMENTS
+ */
+/****************************************************
  * =STRUCTURAL ELEMENTS
  */
 div {
@@ -181,13 +184,13 @@ div.full {
   width: 100%; }
 
 div.container {
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
   margin: 0 auto;
   width: 1320px;
   display: block;
-  position: relative;
-  -webkit-transition: width 0.5s ease-in-out;
-  -moz-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out; }
+  position: relative; }
   @media only screen and (min-width: 1280px) and (max-width: 1439px) {
     div.container {
       width: 1260px; } }

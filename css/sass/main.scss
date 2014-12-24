@@ -13,6 +13,7 @@
 
 /* reset can be found and altered at '_reset.scss' */
 @import 'reset';
+
 /* mixins can be found and altered at '_mixins.scss' */
 @import 'mixins';
 
@@ -51,6 +52,34 @@ a{
 }
 
 /****************************************************
+ * =FORM ELEMENTS
+ */
+
+input{
+  &[type="text"], &[type="password"]{
+    @include inlineblock;
+    @include inner-shadow;
+    font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    border:solid 1px #cccccc;
+    padding:0 6px;
+    height:28px;
+    font-size:16px;
+    width:200px;
+    box-shadow: none;
+  }
+}
+
+textarea{
+  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border:solid 1px #cccccc;
+  padding:6px;
+  margin:5px 0;
+  font-size:16px;
+  width:288px;
+  height:50px;
+}
+
+/****************************************************
  * =MODULAR ELEMENTS
  */
 
@@ -80,7 +109,7 @@ a{
 }
 
 .pad-top{
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .margin-top{
@@ -96,32 +125,9 @@ a{
 }
 
 /****************************************************
- * =FORM ELEMENTS
+ * =REUSABLE ELEMENTS
  */
 
-input{
-  &[type="text"], &[type="password"]{
-    @include inlineblock;
-    @include inner-shadow;
-    font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    border:solid 1px #cccccc;
-    padding:0 6px;
-    height:28px;
-    font-size:16px;
-    width:200px;
-    box-shadow: none;
-  }
-}
-
-textarea{
-  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  border:solid 1px #cccccc;
-  padding:6px;
-  margin:5px 0;
-  font-size:16px;
-  width:288px;
-  height:50px;
-}
 
 /****************************************************
  * =STRUCTURAL ELEMENTS
@@ -147,11 +153,11 @@ div.full{
 }
 
 div.container{
+  @include transition (width 0.5s ease-in-out);
   margin: 0 auto;
   width: 1320px;
   display: block;
   position: relative;
-  @include transition (width 0.5s ease-in-out);
   @include respond(laptop){
     width:1260px;
   }
