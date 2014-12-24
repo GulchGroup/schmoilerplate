@@ -8,3 +8,5 @@ Schmoilerplate boilerplate is meant to be a starting point from which frontend d
 
 - sudo npm install
 - gulp
+
+### Fancy landing page and docs coming soon
