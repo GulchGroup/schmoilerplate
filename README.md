@@ -12,16 +12,16 @@ Schmoilerplate boilerplate is meant to be a starting point from which frontend d
 ### Features
 
 - Gulp integration
--- Sass processing
--- Sass minification
--- Sass GZip
--- JS lint
--- Starts server
--- Opens browser window to server location
--- Watches CSS, HTML, and JS files for changes and reloads in browser using Livereload
+  * Sass processing
+  * Sass minification
+  * Sass GZip
+  * JS lint
+  * Starts server
+  * Opens browser window to server location
+  * Watches CSS, HTML, and JS files for changes and reloads in browser using Livereload
 
 - Mixins
--- Commonly used mixins
+  * Commonly used mixins
 
 - Responsive functionality with predefined mixins
 
