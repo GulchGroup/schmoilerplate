@@ -6,6 +6,7 @@ Schmoilerplate boilerplate is meant to be a starting point from which frontend d
 
 ### Installation
 ```
+$ git clone git@github.com:GulchGroup/schmoilerplate.git
 $ sudo npm install
 $ gulp
 ```
