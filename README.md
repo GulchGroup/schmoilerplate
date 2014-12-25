@@ -20,6 +20,7 @@ $ gulp
   * Starts server
   * Opens browser window to server location
   * Watches CSS, HTML, and JS files for changes and reloads in browser using Livereload
+  * Monitors and logs errors to the console seamlessly
 
 - Mixins
   * Commonly used mixins
