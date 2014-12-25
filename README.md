@@ -1,6 +1,6 @@
 
 # Schmoilerplate
-## A versatile front-end boilerplate
+## A full front end dev environment in 2 commands... 3 if you count the clone
 
 Schmoilerplate boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.
 
