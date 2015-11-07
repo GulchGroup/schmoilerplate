@@ -20,17 +20,17 @@
   },
   "homepage": "https://github.com/criator/schmoilerplate",
   "dependencies": {
-    "gulp": "^3.8.10",
-    "gulp-gzip": "^0.0.8",
-    "gulp-jshint": "^1.9.0",
-    "gulp-livereload": "^2.1.1",
-    "gulp-minify-css": "^0.3.11",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.1.0",
-    "gulp-shell": "^0.2.11",
-    "gulp-watch": "^3.0.0",
-    "gulp-webserver": "^0.9.0",
-    "opn": "^1.0.0"
+    "gulp": "*",
+    "gulp-gzip": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-shell": "*",
+    "gulp-watch": "*",
+    "gulp-webserver": "*",
+    "opn": "*"
   },
   "devDependencies": {}
 }
