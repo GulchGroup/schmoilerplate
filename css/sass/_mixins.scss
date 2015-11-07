@@ -42,7 +42,10 @@ USAGE:
     @media only screen and (min-width:1280px) and (max-width:1439px) { @content ; }
   }
   @else if $point == desktop {
-    @media only screen and (min-width:1440px) { @content ; }
+    @media only screen and (min-width:1440px) and (max-width:1899px) { @content ; }
+  }
+  @else if $point == widescreen {
+    @media only screen and (min-width:1900px) { @content ; }
   }
 }
 
