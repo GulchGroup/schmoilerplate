@@ -12,7 +12,10 @@
 @import 'bourbon/bourbon';
 
 /* reset can be found and altered at '_reset.scss' */
-@import 'reset';
+@import 'reset-star';
+
+/* uncomment to use eric meyer reset */
+//@import 'reset-meyer';
 
 /* mixins can be found and altered at '_mixins.scss' */
 @import 'mixins';
