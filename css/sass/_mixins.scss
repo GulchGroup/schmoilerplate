@@ -10,6 +10,9 @@
 
 USAGE:
 
+  @include respond(widescreen){
+    container is 1840px
+  }
   @include respond(desktop){
     container is 1380px
   }
