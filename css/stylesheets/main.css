@@ -27,6 +27,9 @@
 
 USAGE:
 
+  @include respond(widescreen){
+    container is 1840px
+  }
   @include respond(desktop){
     container is 1380px
   }
@@ -157,10 +160,13 @@ div.container {
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
+  width: 1840px;
   margin: 0 auto;
-  width: 1320px;
   display: block;
   position: relative; }
+  @media only screen and (min-width: 1440px) and (max-width: 1899px) {
+    div.container {
+      width: 1320px; } }
   @media only screen and (min-width: 1280px) and (max-width: 1439px) {
     div.container {
       width: 1260px; } }

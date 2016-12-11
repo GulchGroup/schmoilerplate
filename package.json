@@ -2,10 +2,6 @@
   "name": "schmoilerplate",
   "version": "1.0.0",
   "description": "schmoilerplate boilerplate",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:criator/schmoilerplate.git"
@@ -20,17 +16,20 @@
   },
   "homepage": "https://github.com/criator/schmoilerplate",
   "dependencies": {
-    "gulp": "*",
-    "gulp-gzip": "*",
+    "gulp-gzip": "1.4.0",
+    "gulp-jslint": "1.0.5",
     "gulp-jshint": "*",
-    "gulp-livereload": "*",
-    "gulp-minify-css": "*",
-    "gulp-rename": "*",
-    "gulp-sass": "*",
-    "gulp-shell": "*",
-    "gulp-watch": "*",
-    "gulp-webserver": "*",
-    "opn": "*"
+    "gulp-livereload": "3.8.1",
+    "gulp-clean-css": "2.2.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.0.0",
+    "gulp-shell": "0.5.2",
+    "gulp-watch": "4.3.11",
+    "gulp-webserver": "0.9.1",
+    "opn": "4.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "jshint": "*"
+  }
 }
